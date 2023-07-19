@@ -1,0 +1,25 @@
+<h3>コメント一覧</h3>
+
+<table>
+   <thead>
+     <tr>
+     <th>作品</th>
+      <th>投稿番号</th>
+       <th>投稿内容</th>
+     </tr>
+   </thead>
+
+   <tbody>
+<% @posts.each do |post| %>
+     <% @displays.each do |display| %>
+     <tr>
+<td><%= image_tag post.image ,size: "50x40" if post.image.present? %></td><!--この文がdbから写真画像を表示させている -->
+
+         <td><%= display.post_id %></td>
+          <td><%= display.comment %></td>
+       </tr>
+     <% end %>
+     <% end %>
+   </tbody>
+ </table>
+

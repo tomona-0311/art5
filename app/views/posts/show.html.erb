@@ -1,0 +1,58 @@
+<table>
+<tr>
+<h3>作品画像</h3>
+<td><% if @post.image.attached? %>
+        <%= image_tag @post.image ,size: "300x250" %>
+        <% end %></td>
+</tr>
+<tr>
+<h3>タイトル</h3>
+<td><%= @post.post_name %></td>
+</tr>
+<tr>
+<h3>作品紹介</h3>
+<td><%= @post.introduction %></td>
+</tr>
+</table>
+
+<h3>コメント投稿一覧</h3>
+
+ <table>
+   <thead>
+     <tr>
+       <th>投稿内容</th>
+       <th>更新日時</th>
+       <th>投稿日時</th>
+       <th>投稿者(Post_id)</th>
+     </tr>
+   </thead>
+
+
+
+
+<br>
+<h4>コメントを入力</h4>
+<%= form_with model:@display do |f| %>
+<table>
+<tr>
+
+<div class="field">
+<th><%=f.label :comment,"作品へのコメント入力"%></th>
+<td><%=f.text_field :comment,placeholder:"コメントを入力" %></td>
+</div>
+</tr>
+</table>
+<%= f.hidden_field :post_id, value: @post.id %>
+<div>
+<ul>
+<li><%=f.submit"確認画面へ"%></li>
+</ul>
+<%end%>
+
+
+ <div>
+   <ul>
+     <li><%= link_to "ユーザー情報一覧に戻る", :posts %></li>
+   </ul>
+ </div>
+
