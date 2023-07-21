@@ -1,8 +1,10 @@
-class DisplaysController < ApplicationController
+class CommentsController < ApplicationController
   def index
+
     @user = current_user
-    @displays = Display.all
+    @comments = Comment.all
     @posts = Post.all
+
    end
 
 
@@ -10,18 +12,21 @@ class DisplaysController < ApplicationController
     @user = current_user
     #@post = Post.find(params[:display][:post_id])
     #@display= @post.display
-    @display = Display.new(params.require(:display).permit(:comment, :post_id ))
+    #@user = User.find(params[:id])
 
-    if @display.save!
+    @comment = Comment.new(params.require(:comment).permit(:comment, :user_id, :post_id ))
+    binding.pry
+
+    if @comment.save!
 
       puts "Displayの保存に成功しました"
       flash[:notice] = "コメント登録いたしました。"
-      redirect_to :displays
+      redirect_to :comments
     else
       puts "Displayの保存に失敗しました"
       flash[notice] = "失敗しました"
-      @displays = Display.all
-      render "displays/index"
+      @comments = Comment.all
+      render "comments/index"
   end
   end
 end

@@ -32,13 +32,13 @@
 
 <br>
 <h4>コメントを入力</h4>
-<%= form_with model:@display do |f| %>
+<%= form_with model:@comment do |f| %>
 <table>
 <tr>
 
 <div class="field">
 <th><%=f.label :comment,"作品へのコメント入力"%></th>
-<td><%=f.text_field :comment,placeholder:"コメントを入力" %></td>
+<td><%=f.text_area :comment,placeholder:"コメントを入力" %></td>
 </div>
 </tr>
 </table>

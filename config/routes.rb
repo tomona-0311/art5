@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   get 'pages/home'
-  devise_for :users
+  get 'users/account'
+  get 'users/profile'
 
+  devise_for :users
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
   devise_scope :user do
     root to: 'users/registrations#new'
   end
@@ -9,9 +14,10 @@ Rails.application.routes.draw do
   #resources :users, only: :show
   get "/", to: "devise/registrations#new"
   resources :posts
-  resources :displays
+  resources :comments
+
   resources :posts do  #postsコントローラへのルーティング
-    resources :displays, only: [:create]  #displaysコントローラへのルーティング
+    resources :comments, only: [:create]  #displaysコントローラへのルーティング
   end
   #resources :posts do
    # resources :displays

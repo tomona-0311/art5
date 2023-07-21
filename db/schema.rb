@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_17_180717) do
+ActiveRecord::Schema.define(version: 2023_07_20_161421) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2023_07_17_180717) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "displays", force: :cascade do |t|
+  create_table "comments", force: :cascade do |t|
     t.string "comment"
     t.integer "user_id"
     t.integer "post_id"
@@ -56,6 +56,9 @@ ActiveRecord::Schema.define(version: 2023_07_17_180717) do
   create_table "posts", force: :cascade do |t|
     t.string "post_name"
     t.string "introduction"
+    t.integer "user_id"
+    t.integer "post_id"
+    t.integer "comment_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

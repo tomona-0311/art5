@@ -1,0 +1,28 @@
+<h3>コメント一覧</h3>
+
+<table>
+   <thead>
+     <tr>
+     <th>ユーザーid(user_id)</th>
+
+      <th>投稿番号(post_id)</th>
+       <th>投稿内容</th>
+     </tr>
+   </thead>
+
+<tbody>
+<% @comments.each do |comment| %>
+<td><%= comment.user_id%></td>
+<%end%>
+<% @posts.each do |post| %>
+<tr>
+<td><%= image_tag post.image ,size: "50x40" if post.image.present? %><% end %></td>
+<% @comments.each do |comment| %>
+<td><%= comment.post_id%></td>
+<td><%= comment.comment %></td>
+</tr>
+<% end %>
+
+</tbody>
+</table>
+

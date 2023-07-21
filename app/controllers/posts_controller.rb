@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    @user = current_user
     @post = Post.new(post_params)
     if @post.save
       puts "Postの保存に成功しました"
@@ -27,13 +28,14 @@ class PostsController < ApplicationController
 
     @post = Post.find(params[:id])
     #@displays = Display.find(params[:display_id])
-    @display = Display.new
-    @displays = @post.displays
+    #@user = User.find(params[:id])
+    @comment = Comment.new
+    @comments = @post.comments
     #@displays = Display.where(post_id: @post.id)
 
   end
 private
  def post_params
-    params.require(:post).permit(:post_name,:introduction,:image)
+    params.require(:post).permit(:post_name,:user_id,:introduction,:image)
  end
 end
