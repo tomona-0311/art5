@@ -1,0 +1,13 @@
+<% if @post.image.attached? %>
+        <%= image_tag @post.image ,size: "150x250" %>
+        <% end %>
+        <br>
+<th>タイトル名</th>
+<br>
+<td><%= @post.post_name%></td>
+<br>
+<th>コメント</th>
+<br>
+<td><%= @comment.id%></td>
+<td><%= @comment.comment%></td>
+

@@ -1,11 +1,11 @@
 class CommentsController < ApplicationController
   def index
-
-    @user = current_user
     @comments = Comment.all
     @posts = Post.all
+    @user = current_user
 
    end
+
 
 
   def create
@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
     #@user = User.find(params[:id])
 
     @comment = Comment.new(params.require(:comment).permit(:comment, :user_id, :post_id ))
-    binding.pry
+
 
     if @comment.save!
 
@@ -28,6 +28,12 @@ class CommentsController < ApplicationController
       @comments = Comment.all
       render "comments/index"
   end
+  end
+  def show
+    @user = current_user
+    @comment = Comment.find(params[:id])
+    @comments = Comment.all
+    @post = Post.find(params[:id])
   end
 end
 

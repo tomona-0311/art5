@@ -1,37 +1,18 @@
-<table>
-<tr>
+
 <h3>作品画像</h3>
-<td><% if @post.image.attached? %>
-        <%= image_tag @post.image ,size: "300x250" %>
-        <% end %></td>
-</tr>
-<tr>
+<% if @post.image.attached? %>
+        <%= image_tag @post.image ,size: "150x250" %>
+        <% end %>
+
 <h3>タイトル</h3>
-<td><%= @post.post_name %></td>
-</tr>
-<tr>
+<%= @post.post_name %>
 <h3>作品紹介</h3>
-<td><%= @post.introduction %></td>
-</tr>
-</table>
+<%= @post.introduction %>
+
+
 
 <h3>コメント投稿一覧</h3>
 
- <table>
-   <thead>
-     <tr>
-       <th>投稿内容</th>
-       <th>更新日時</th>
-       <th>投稿日時</th>
-       <th>投稿者(Post_id)</th>
-     </tr>
-   </thead>
-
-
-
-
-<br>
-<h4>コメントを入力</h4>
 <%= form_with model:@comment do |f| %>
 <table>
 <tr>

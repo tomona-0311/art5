@@ -15,8 +15,8 @@
 <% @posts.each do |post| %>
 
 <tr>
-<td><%= image_tag post.image ,size: "300x250" if post.image.present? %></td><!--この文がdbから写真画像を表示させている -->
-<td><%= post.post_name %> </td>
+<td><%= image_tag post.image ,size: "300x450" if post.image.present? %></td><!--この文がdbから写真画像を表示させている -->
+
 <td><%= link_to "#{post.post_name}", {controller: 'posts', action: 'show', id: post.id} %> </td></div>
 <td> <%= post.introduction%> </td>
 
