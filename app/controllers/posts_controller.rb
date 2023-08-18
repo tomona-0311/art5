@@ -4,6 +4,8 @@ class PostsController < ApplicationController
   def index
     @user = current_user
     @posts = Post.all
+    @user = User.all
+
   end
   def new
     @user = current_user
@@ -16,7 +18,7 @@ class PostsController < ApplicationController
     if @post.save
       puts "Postの保存に成功しました"
           flash[:notion] = "作品登録完了"
-      redirect_to :posts # ＠displayとすることでDBから取得したデータを指定すると、そのコントローラーのshowアクションに該当するページに遷移する。「redirect_to パラメータ」
+      redirect_to :posts # ＠postsとすることでDBから取得したデータを指定すると、そのコントローラーのshowアクションに該当するページに遷移する。「redirect_to パラメータ」
   else
     render "posts/new"
 
@@ -25,13 +27,13 @@ class PostsController < ApplicationController
 
   def show
     @user = current_user
+    @users = User.all
 
     @post = Post.find(params[:id])
-    #@displays = Display.find(params[:display_id])
-    #@user = User.find(params[:id])
+
     @comment = Comment.new
-    @comments = @post.comments
-    #@displays = Display.where(post_id: @post.id)
+    @comments = @post.comments#投稿詳細に関連付けてあるコメントを全取得
+
 
   end
 private

@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
   def index
     @comments = Comment.all
     @posts = Post.all
+    @users = User.all
     @user = current_user
 
    end
@@ -10,7 +11,7 @@ class CommentsController < ApplicationController
 
   def create
     @user = current_user
-    #@post = Post.find(params[:display][:post_id])
+    @post = Post.find(params[:comment][:post_id])
     #@display= @post.display
     #@user = User.find(params[:id])
 
@@ -21,7 +22,7 @@ class CommentsController < ApplicationController
 
       puts "Displayの保存に成功しました"
       flash[:notice] = "コメント登録いたしました。"
-      redirect_to :comments
+      redirect_to @post
     else
       puts "Displayの保存に失敗しました"
       flash[notice] = "失敗しました"

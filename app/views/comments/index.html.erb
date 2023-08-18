@@ -40,7 +40,7 @@
 <div class=comment>
 <td><%= comment.post_id%></td>
 <td><%= link_to "#{comment.comment}", {controller: 'comments', action: 'show', id: comment.id} %> </td></div>
-<td><%= comment.comment %></td>
+
 </tr>
 </div>
 <% end %>
@@ -48,5 +48,4 @@
 </div>
 </tbody>
 </table>
-
 

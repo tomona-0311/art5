@@ -1,4 +1,5 @@
-
+<div class = all>
+<div class = image>
 <h3>作品画像</h3>
 <% if @post.image.attached? %>
         <%= image_tag @post.image ,size: "150x250" %>
@@ -10,30 +11,44 @@
 <%= @post.introduction %>
 
 
-
-<h3>コメント投稿一覧</h3>
-
 <%= form_with model:@comment do |f| %>
 <table>
 <tr>
-
-<div class="field">
 <th><%=f.label :comment,"作品へのコメント入力"%></th>
 <td><%=f.text_area :comment,placeholder:"コメントを入力" %></td>
-</div>
 </tr>
 </table>
 <%= f.hidden_field :post_id, value: @post.id %>
-<div>
 <ul>
-<li><%=f.submit"確認画面へ"%></li>
+<li><%=f.submit"登録へ"%></li>
 </ul>
 <%end%>
 
 
- <div>
    <ul>
-     <li><%= link_to "ユーザー情報一覧に戻る", :posts %></li>
+     <li><%= link_to "作品登録情報一覧に戻る", :posts %></li>
+     <li><%= link_to "作品コメント情報一覧へ", :comments %></li>
    </ul>
- </div>
+</div>
+<div class=comment>
+<table>
+<thead>
+<tr>
+
+<h3>コメント投稿一覧</h3>
+
+</tr>
+</thead>
+
+<% @comments.each do |comment| %>
+<tbody>
+
+  <ul> <li>
+<%= comment.comment %></li></ul>
+
+<% end %></div>
+</tbody>
+</table>
+
+
 

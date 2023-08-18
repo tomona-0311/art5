@@ -1,6 +1,10 @@
 <%= link_to "プロフィール",users_profile_path %>
 <%= form_with model: @user, url: users_profile_path,  class: 'new_user', local: true do |f| %>
 <div class="update-content">
+<div class="row">
+   <%= f.label :名前,class:"col-md-3" %><br />
+  <div class="col-md-9"><%= @user.name %></div>
+</div>
  <div class="row">
    <%= f.label :メールアドレス,class:"col-md-3" %><br />
   <div class="col-md-9"><%= @user.email %></div>

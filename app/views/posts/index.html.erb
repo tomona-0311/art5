@@ -2,12 +2,12 @@
 <table>
 <thead>
 <tr>
+
 <th>作品画像</th>
 <th>タイトル名</th>
 <th>作品紹介</th>
 <th>登録日</th>
 </tr>
-
 
 </thead>
 <tbody>
@@ -15,16 +15,11 @@
 <% @posts.each do |post| %>
 
 <tr>
+
 <td><%= image_tag post.image ,size: "300x450" if post.image.present? %></td><!--この文がdbから写真画像を表示させている -->
 
 <td><%= link_to "#{post.post_name}", {controller: 'posts', action: 'show', id: post.id} %> </td></div>
 <td> <%= post.introduction%> </td>
-
-
-
-
-<!--この文がdbから写真画像を表示させている -->
-
 <td> <%= post.created_at.strftime('%Y/%m/%d %H:%M:%S') %></td>
 </tr>
 
