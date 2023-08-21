@@ -1,0 +1,47 @@
+td img{
+
+  height:auto;
+  }
+.bisque{
+  background-color: antiquewhite;
+  margin:100px;
+  background-attachment: fixed;
+  display: block;
+  width:700px;
+  margin: 0 auto;
+
+}
+th{
+  background-color: bisque;
+}
+.post{
+  color:rgb(209, 87, 16);
+}
+
+.post:hover{
+  color: white ;
+}
+h2{
+  background-color: bisque;
+width:200px;
+
+margin:60px auto;
+}
+.background{
+  background-image: url(https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);
+  background-size:  contain;
+   object-fit: contain;
+   height: 100%;
+   width:100%;
+
+}
+h3{
+  margin: 0px;
+}
+.post{
+  text-decoration: none!important;
+
+}
+td{
+  text-align: center;
+}

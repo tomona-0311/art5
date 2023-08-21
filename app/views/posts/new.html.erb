@@ -1,23 +1,25 @@
 <h3>作品登録</h3>
 
 <%= form_with model:@post do |f| %>
-<table>
+
 <tr>
 
 <div class="field">
 <th><%=f.label :image,"作品"%></th>
 <td><%=f.file_field :image,placeholder:"作品を添付" %></td>
 </div>
+<br>
 <div class="field">
 <th><%=f.label :post_name,"タイトル名"%></th>
 <td><%=f.text_field :post_name,placeholder:"タイトルを入力" %></td>
 </div>
+<br>
 <div class="field">
 <th><%=f.label :introduction,"作品紹介"%></th>
 <td><%=f.text_field :introduction,placeholder:"作品の紹介文を入力" %></td>
 </div>
 </tr>
-</table>
+
 
 <div>
 <ul>

@@ -1,10 +1,13 @@
-<div class = all>
-<div class = image>
-<h3>作品画像</h3>
-<% if @post.image.attached? %>
-        <%= image_tag @post.image ,size: "150x250" %>
-        <% end %>
 
+<div class = "all">
+<div class = "view">
+<div class = "image">
+
+<h3>作品画像</h3>
+<div class = "imagegrongd">
+<% if @post.image.attached? %>
+        <%= image_tag @post.image ,size: "100x200" %>
+        <% end %></div>
 <h3>タイトル</h3>
 <%= @post.post_name %>
 <h3>作品紹介</h3>
@@ -12,12 +15,12 @@
 
 
 <%= form_with model:@comment do |f| %>
-<table>
+
 <tr>
-<th><%=f.label :comment,"作品へのコメント入力"%></th>
-<td><%=f.text_area :comment,placeholder:"コメントを入力" %></td>
+<h4><%=f.label :comment,"作品へのコメント入力"%></h4>
+<%=f.text_area :comment,placeholder:"コメントを入力" %>
 </tr>
-</table>
+
 <%= f.hidden_field :post_id, value: @post.id %>
 <ul>
 <li><%=f.submit"登録へ"%></li>
@@ -26,15 +29,15 @@
 
 
    <ul>
-     <li><%= link_to "作品登録情報一覧に戻る", :posts %></li>
-     <li><%= link_to "作品コメント情報一覧へ", :comments %></li>
+     <li><%= link_to "作品登録情報一覧に戻る", :posts ,class:"link" %></li>
+     <li><%= link_to "作品コメント情報一覧へ", :comments ,class:"link" %></li>
    </ul>
 </div>
 <div class=comment>
 <table>
 <thead>
 <tr>
-
+</div>
 <h3>コメント投稿一覧</h3>
 
 </tr>
