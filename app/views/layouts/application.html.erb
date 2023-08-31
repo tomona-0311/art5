@@ -15,18 +15,18 @@
   <header class="color">
   <h1>作品投稿サイト</h1>
   <ul class="list_navi">
-<li class="menu_li"><%= link_to "作品登録", new_post_path %></li>
-<li class="menu_li"><%= link_to "作品登録一覧", posts_path %></li>
-<li class="menu_li"><%= link_to "コメント一覧",comments_path%></li>
+<li><%= link_to "作品登録", new_post_path,class:"menu_li" %></li>
+<li><%= link_to "作品登録一覧", posts_path,class:"menu_li" %></li>
+<li><%= link_to "コメント一覧",comments_path,class:"menu_li" %></li>
 
-<li class="menu_li"><%= link_to "ログアウト",destroy_user_session_path, method: :delete %></li>
+<li><%= link_to "ログアウト",destroy_user_session_path, method: :delete ,class:"menu_li" %></li>
 
  </ul>
 
   </header>
     <%= yield %>
   </body>
-  <br>
+
   <footer>
   2023/ポートフォリオ
   </footer>

@@ -33,8 +33,9 @@ class CommentsController < ApplicationController
   def show
     @user = current_user
     @comment = Comment.find(params[:id])
-    @comments = Comment.all
-    @post = Post.find(params[:id])
+
+
+
   end
 end
 

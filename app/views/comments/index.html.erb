@@ -1,36 +1,12 @@
 <h3>コメント一覧</h3>
 <div class = all>
-<table>
 
-   <thead>
-
-     <tr>
-     <th>画像</th>
-</tr>
-   </thead>
-
-<tbody>
-
-<% @posts.each do |post| %>
-
-<tr>
-
-<td>
-<div class= image>
-<% if post.image.attached? %>
-        <%= image_tag post.image ,size: "50x60" %>
-        <% end %></div></td><% end %>
-
-</table>
-</tbody>
-
-
-<table>
+<table class="comments">
    <thead>
     <tr>
-<th>投稿番号</th>
-
-       <th>コメント</th>
+<th>画像</th>
+<th>投稿番号post</th>
+<th>コメント</th>
      </tr>
      </thead>
 
@@ -38,6 +14,9 @@
 <% @comments.each do |comment| %>
 <tr>
 <div class=comment>
+<td><% if comment.post.image.attached? %>
+        <%= image_tag comment.post.image ,size: "50x60" %>
+        <% end %></td>
 <td><%= comment.post_id%></td>
 <td><%= link_to "#{comment.comment}", {controller: 'comments', action: 'show', id: comment.id} %> </td></div>
 
