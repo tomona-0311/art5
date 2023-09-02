@@ -1,16 +1,25 @@
 
 .color{
-background-color: antiquewhite;
+  background-image: url(https://user0514.cdnw.net/shared/img/thumb/PAK35_enogutoparetohude_TP_V.jpg);
+  background-position:center center;  /* 背景画像の位置を中央に */
+  background-size:cover;  /* 背景画像が領域全体を覆うように */
+
 }
 .image img{
 object-fit: contain;
 }
 
 .comments{
-  background-color: antiquewhite;
+  background-color:rgba(255,255,255,0.5);
   margin: 0 auto;
-
-
+}
+.comment{
+  text-align: right;
+  color: #FF9933;
+  text-decoration: none;
+}
+.comment:hover{
+  color: white ;
 }
 .table{
   margin: 0 auto;
@@ -24,8 +33,6 @@ object-fit: contain;
 h3{
   margin-left: 50px;
   text-align: center;
-
-
 }
 // Place all the styles related to the displays controller here.
 // They will automatically be included in application.css.

@@ -13,11 +13,33 @@
  *= require_tree .
  *= require_self
  */
+ .color{
+    background-image: url(https://user0514.cdnw.net/shared/img/thumb/PAK35_enogutoparetohude_TP_V.jpg);
+    background-position:center center;  /* 背景画像の位置を中央に */
+    background-size:contain;  /* 背景画像が領域全体を覆うように */
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
 
+  }
+
+ h1{
+    width: 300px;
+    margin-top: 100px;
+    background-color: yellow;
+    border-radius: 30% 30% 30% 40%/30% 30% 40% 40%;
+    opacity: 0.5;
+
+  top: 50%;
+  left: 50%;
+ }
 
 footer{
-  bottom: 0
-  width:100px;
+    bottom: 0; /*下に固定*/
+    color: white;
+    text-align: center;
+    width:50px;
 }
  .menu_li{
   background-color: #CCFFFF;
@@ -44,13 +66,10 @@ footer{
   margin-bottom: 20px;
   list-style: none;
   width: 200px;
-
+  border-radius: 30% 30% 30% 40%/30% 30% 40% 40%;
 
  }
- .color{
-height: 100%;
-text-align: center;
- }
+
 
  .menu_li{
   text-decoration:none;

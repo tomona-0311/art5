@@ -1,6 +1,5 @@
+<div class = "all">
 <h3>コメント一覧</h3>
-<div class = all>
-
 <table class="comments">
    <thead>
     <tr>
@@ -13,15 +12,15 @@
 <tbody>
 <% @comments.each do |comment| %>
 <tr>
-<div class=comment>
+
 <td><% if comment.post.image.attached? %>
         <%= image_tag comment.post.image ,size: "50x60" %>
         <% end %></td>
 <td><%= comment.post_id%></td>
-<td><%= link_to "#{comment.comment}", {controller: 'comments', action: 'show', id: comment.id} %> </td></div>
+<td><%= link_to "#{comment.comment}", {controller: 'comments', action: 'show', id: comment.id},class:"comment" %> </td></div>
 
 </tr>
-</div>
+
 <% end %>
 
 </div>

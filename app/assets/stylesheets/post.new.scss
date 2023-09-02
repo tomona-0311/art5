@@ -1,5 +1,19 @@
 .field{
-  background-color: antiquewhite;
+  background-color:rgba(255,255,255,0.5);
   width:300px;
   margin: 0 auto;
+
+
+  position: relative
+}
+.submit{
+  text-align: center;
+}
+.image-new{
+  background-image: url(https://images.unsplash.com/photo-1595878715977-2e8f8df18ea8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80);
+    background-size:  contain;
+    position: relative;
+    background-size: 100%;
+    min-height: 100vh;
+   background-repeat: no-repeat;
 }

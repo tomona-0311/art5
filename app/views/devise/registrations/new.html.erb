@@ -1,3 +1,4 @@
+<div class ="backimage">
 <h2>アカウント作成</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -25,8 +26,9 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "サインアップ" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>

@@ -13,6 +13,7 @@
   <body>
 
   <header class="color">
+  <div class ="head-line">
   <h1>作品投稿サイト</h1>
   <ul class="list_navi">
 <li><%= link_to "作品登録", new_post_path,class:"menu_li" %></li>
@@ -22,12 +23,10 @@
 <li><%= link_to "ログアウト",destroy_user_session_path, method: :delete ,class:"menu_li" %></li>
 
  </ul>
-
+</div>
   </header>
     <%= yield %>
   </body>
 
-  <footer>
-  2023/ポートフォリオ
-  </footer>
+  <footer>  2023/ポートフォリオ</footer>
 </html>

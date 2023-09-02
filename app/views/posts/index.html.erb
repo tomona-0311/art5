@@ -1,6 +1,6 @@
 <div class= "background">
 <h2>登録済み作品一覧</h2>
-<table div class="bisque">
+<table class="bisque">
 <thead>
 <tr>
 
@@ -16,16 +16,13 @@
 <% @posts.each do |post| %>
 
 <tr>
-
 <td><%= image_tag post.image ,size: "100x250" if post.image.present? %></td><!--この文がdbから写真画像を表示させている -->
-
-<td><%= link_to "#{post.post_name}", {controller: 'posts', action: 'show', id: post.id},class:"post" %> </td></div>
+<td><%= link_to "#{post.post_name}", {controller: 'posts', action: 'show', id: post.id},class:"post" %> </td>
 <td> <%= post.introduction%> </td>
 <td> <%= post.created_at.strftime('%Y/%m/%d %H:%M:%S') %></td>
 </tr>
-
-
 <% end %>
-
-</tbody></div>
+</div>
+</tbody>
+</table>
 
