@@ -1,10 +1,9 @@
 <div class = "all">
-<h3>コメント一覧</h3>
+<h3 class ="index-comment">コメント一覧</h3>
 <table class="comments">
    <thead>
     <tr>
 <th>画像</th>
-<th>投稿番号post</th>
 <th>コメント</th>
      </tr>
      </thead>
@@ -16,7 +15,6 @@
 <td><% if comment.post.image.attached? %>
         <%= image_tag comment.post.image ,size: "50x60" %>
         <% end %></td>
-<td><%= comment.post_id%></td>
 <td><%= link_to "#{comment.comment}", {controller: 'comments', action: 'show', id: comment.id},class:"comment" %> </td></div>
 
 </tr>

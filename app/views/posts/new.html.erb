@@ -1,6 +1,7 @@
 <div class ="image-new">
+<div class = "display">
 <h3>作品登録</h3>
-
+</div>
 <%= form_with model:@post do |f| %>
 
 <tr>
@@ -20,14 +21,9 @@
 <td><%=f.text_field :introduction,placeholder:"作品の紹介文を入力" %></td>
 </div>
 </tr>
-
-
-<div>
 <ul>
 <li class="submit"><%=f.submit"確認画面へ"%></li>
 </ul>
-</div>
-
-
 <%end%>
+</div>
 </div>

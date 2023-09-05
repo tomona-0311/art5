@@ -1,10 +1,52 @@
 
-.color{
-  background-image: url(https://user0514.cdnw.net/shared/img/thumb/PAK35_enogutoparetohude_TP_V.jpg);
-  background-position:center center;  /* 背景画像の位置を中央に */
-  background-size:cover;  /* 背景画像が領域全体を覆うように */
+.comment-show{
+ display :flex;
+ position:relative;
+ background-image: url(https://images.unsplash.com/photo-1496167117681-944f702be1f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3132&q=80);
+ background-position:center center;  /* 背景画像の位置を中央に */
+ background-size:cover;
+ height: 350px;
 
 }
+.comment-title{
+  position:absolute;
+  left:60%;
+  top:30%;
+  font-size:15pt
+}
+.comment-image{
+  position:absolute;
+  left:25%;
+  top:30%;
+
+
+}
+.td{
+  height:auto;
+padding: 5px;
+    border: 9px solid #FFCC66;
+  }
+.show-continue{
+  background-color:rgba(255,255,255,0.5);
+  width:150px;
+  text-align: center;
+}
+.tilte-name{
+  width:150px;
+  background-color: bisque;
+  text-align: center;
+}
+.comment-name{
+  width:150px;
+  background-color: bisque;
+  text-align: center;
+}
+.index-comment{
+  width:200px;
+margin:0px auto;
+margin-bottom: 20px;
+}
+
 .image img{
 object-fit: contain;
 }
@@ -19,7 +61,7 @@ object-fit: contain;
   text-decoration: none;
 }
 .comment:hover{
-  color: white ;
+  color: black ;
 }
 .table{
   margin: 0 auto;
@@ -27,8 +69,9 @@ object-fit: contain;
 
 }
 .all{
+  padding-top: 20px;
   text-align: center;
-  position: relative
+  /*position: relative; */
 }
 h3{
   margin-left: 50px;

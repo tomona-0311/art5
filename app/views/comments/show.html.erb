@@ -1,13 +1,21 @@
-<% if @comment.post.image.attached? %>
-        <%= image_tag @comment.post.image ,size: "150x250" %>
-        <% end %>
-        <br>
-<th>タイトル名</th>
-<br>
-<td><%= @comment.post.post_name%></td>
-<br>
-<th>コメント</th>
-<br>
-<td><%= @comment.id%></td>
-<td><%= @comment.comment%></td>
+ <div class ="comment-show">
+ <div class ="comment-image">
 
+ <% if @comment.post.image.attached? %>
+<%= image_tag @comment.post.image ,size: "150x250", class:"td" %>
+<% end %>
+        <br></div>
+         <div class ="comment-title">
+       <div class ="tilte-name">
+<th >タイトル名</th></div>
+
+<div class ="show-continue">
+<td><%= @comment.post.post_name%></td></div>
+<br>
+<div class ="comment-name">
+<th>コメント</th></div>
+
+<div class ="show-continue">
+<td><%= @comment.comment%></td></div>
+</div>
+</div>
