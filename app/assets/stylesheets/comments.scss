@@ -1,3 +1,12 @@
+.all{
+  background-image: url(https://images.unsplash.com/photo-1515169273894-7e876dcf13da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80
+);
+  background-size:  cover;
+   background-position: left 10px top 10px,center;
+
+   margin: 0 auto;
+
+}
 
 .comment-show{
  display :flex;
@@ -10,8 +19,8 @@
 }
 .comment-title{
   position:absolute;
-  left:60%;
-  top:30%;
+  left:50%;
+  top:0%;
   font-size:15pt
 }
 .comment-image{
@@ -28,16 +37,17 @@ padding: 5px;
   }
 .show-continue{
   background-color:rgba(255,255,255,0.5);
-  width:150px;
+  width:450px;
+  height: 60px;
   text-align: center;
 }
 .tilte-name{
-  width:150px;
+  width:450px;
   background-color: bisque;
   text-align: center;
 }
 .comment-name{
-  width:150px;
+  width:450px;
   background-color: bisque;
   text-align: center;
 }

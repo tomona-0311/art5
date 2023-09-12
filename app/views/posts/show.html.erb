@@ -1,8 +1,7 @@
 
-<div class = "all">
+<main>
 <div class = "view">
 <div class = "image">
-
 <h3>作品画像</h3>
 <div class = "imagegrongd">
 <% if @post.image.attached? %>
@@ -33,25 +32,25 @@
      <li><%= link_to "作品コメント情報一覧へ", :comments ,class:"link" %></li>
    </ul>
 </div>
+
 <div class="index">
 <table>
 <thead>
 <tr>
-</div>
 <h3>コメント投稿一覧</h3>
-
 </tr>
 </thead>
 
 <% @comments.each do |comment| %>
-<tbody>
+
 
   <ul> <li>
 <%= comment.comment %></li></ul>
 
-<% end %></div>
-</tbody>
+<% end %>
+</div>
 </table>
+</main>
 
 
 

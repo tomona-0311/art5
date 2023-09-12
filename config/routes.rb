@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   resources :posts do  #postsコントローラへのルーティング
     resources :comments, only: [:create]  #commentsコントローラへのルーティング
   end
+  resources :comments, only: [:destroy]
+
   #resources :posts do
    # resources :displays
  # end

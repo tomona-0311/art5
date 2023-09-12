@@ -26,6 +26,7 @@ class PostsController < ApplicationController
   end
 
   def show
+
     @user = current_user
     @users = User.all
 
@@ -40,4 +41,5 @@ private
  def post_params
     params.require(:post).permit(:post_name,:user_id,:introduction,:image)
  end
+
 end

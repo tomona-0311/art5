@@ -33,10 +33,12 @@ class CommentsController < ApplicationController
   def show
     @user = current_user
     @comment = Comment.find(params[:id])
-
-
+  end
+  def destroy
+    Comment.find(params[:id]).destroy
+    redirect_to comments_path
+  end
 
   end
-end
 
 
