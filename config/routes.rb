@@ -17,9 +17,10 @@ Rails.application.routes.draw do
   resources :comments
 
   resources :posts do  #postsコントローラへのルーティング
-    resources :comments, only: [:create]  #commentsコントローラへのルーティング
+    resources :comments, only: [:create, :destroy]  #commentsコントローラへのルーティング
   end
-  resources :comments, only: [:destroy]
+  delete 'comments/:id' => 'comments#destroy'
+
 
   #resources :posts do
    # resources :displays
