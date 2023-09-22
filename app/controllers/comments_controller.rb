@@ -35,15 +35,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
   end
 
-  def destroy
-    binding.pry
-    comment = Comment.find(params[:id])
-  if comment.post_id == post.id
-   comment.destroy
-
-
-    redirect_to comments_path
-  end
+  
 end
   end
 

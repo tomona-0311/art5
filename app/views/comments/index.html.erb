@@ -5,7 +5,6 @@
     <tr>
 <th>画像</th>
 <th>コメント</th>
-<th>コメント削除</th>
      </tr>
      </thead>
 
@@ -17,8 +16,6 @@
         <%= image_tag comment.post.image ,size: "50x60" %>
         <% end %></td>
 <td><%= link_to "#{comment.comment}", {controller: 'comments', action: 'show', id: comment.id},class:"comment" %> </td></div>
-<td><%= link_to"削除",  method: :delete %></td>
-
 </tr>
 <% end %>
 
